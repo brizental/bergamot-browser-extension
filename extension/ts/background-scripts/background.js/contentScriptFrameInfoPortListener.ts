@@ -6,6 +6,10 @@ import { FrameInfo } from "../../shared-resources/types/bergamot.types";
 import { Runtime } from "webextension-polyfill-ts";
 import Port = Runtime.Port;
 
+import Glean from "@mozilla/glean/webext";
+
+Glean.initialize("something", true);
+
 export const contentScriptFrameInfoPortListener = (port: Port) => {
   if (port.name !== "port-from-content-script-frame-info") {
     return;

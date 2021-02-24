@@ -109,7 +109,7 @@ class MobxKeystoneProxy {
         actionCall,
         requestId,
       });
-      resolve();
+      resolve(undefined);
     });
   }
 }
